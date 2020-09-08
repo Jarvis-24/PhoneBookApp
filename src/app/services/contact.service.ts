@@ -8,7 +8,8 @@ import { Contact } from '../models/Contact';
   providedIn: 'root',
 })
 export class ContactService {
-  contactUrl: string = 'http://localhost:3000/contacts';
+  contactUrl: string =
+    'https://github.com/Jarvis-24/PhoneBookApp/blob/master/db.json';
 
   constructor(private http: HttpClient) {}
 
