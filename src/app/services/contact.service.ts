@@ -8,8 +8,7 @@ import { Contact } from '../models/Contact';
   providedIn: 'root',
 })
 export class ContactService {
-  contactUrl: string =
-    'https://jsonplaceholder.typicode.com/Jarvis-24/PhoneBookApp';
+  contactUrl: string = 'http://localhost:3000/contacts';
 
   constructor(private http: HttpClient) {}
 
