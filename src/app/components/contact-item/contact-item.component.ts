@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Contact } from 'src/app/models/Contact';
+import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-contact-item',
@@ -8,12 +9,14 @@ import { Contact } from 'src/app/models/Contact';
 })
 export class ContactItemComponent implements OnInit {
   @Input() contact: Contact;
-  constructor() {}
+  @Output() deleteContact: EventEmitter<Contact> = new EventEmitter();
+
+  constructor(private contactService: ContactService) {}
 
   ngOnInit(): void {}
 
   //onDelete
   onDelete(contact) {
-    console.log('Deleted');
+    this.deleteContact.emit(contact);
   }
 }

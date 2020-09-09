@@ -17,4 +17,17 @@ export class ContactsComponent implements OnInit {
       this.contacts = contacts;
     });
   }
+  // Delete Contact
+  deleteContact(contact: Contact) {
+    // Removing From the UI
+    this.contacts = this.contacts.filter((c) => c.id !== contact.id);
+    // Removing from the json server and go to contact.service.ts
+    this.contactService.deleteContact(contact).subscribe();
+  }
+  // Add Contact
+  addContact(contact: Contact) {
+    this.contactService.addContact(contact).subscribe((contact) => {
+      this.contacts.push(contact);
+    });
+  }
 }

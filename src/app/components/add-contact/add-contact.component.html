@@ -1,0 +1,18 @@
+<div class="add-contact">
+  <h3>Add Contact here..</h3>
+  <form class="form" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="name"
+      placeholder="Enter Name..."
+    />
+    <input
+      type="number"
+      name="contact"
+      [(ngModel)]="contact"
+      placeholder="Enter Contact..."
+    />
+    <button type="submit" class="addBtn">+ Add Contact</button>
+  </form>
+</div>

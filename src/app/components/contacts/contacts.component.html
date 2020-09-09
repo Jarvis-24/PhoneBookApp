@@ -1,4 +1,6 @@
+<app-add-contact (addContact)="addContact($event)"></app-add-contact>
 <app-contact-item
   *ngFor="let contact of contacts"
   [contact]="contact"
+  (deleteContact)="deleteContact($event)"
 ></app-contact-item>

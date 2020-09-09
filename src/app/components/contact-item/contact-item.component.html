@@ -1,4 +1,9 @@
 <div class="contact">
-  <p>{{ contact.name }}</p>
-  <button (click)="onDelete(contact)" class="del">x</button>
+  <div class="data">
+    <h3>{{ contact.name }}</h3>
+    <p>{{ contact.contact }}</p>
+  </div>
+  <div class="button">
+    <button (click)="onDelete(contact)" class="del">x</button>
+  </div>
 </div>
